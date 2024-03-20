@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+   
+    <title>Driving License Renewal</title>
+</head>
+<body>
+
+    <h3>Driving License Renewal</h3>
+ <div class="dropdown">
+    <input type="text" class="textBox" placeholder="Choose issue" readonly>
+    <div class="option">
+        <div onclick="show('Sales')">Sales</div>
+        <div onclick="show('Document Pickup')">Document Pickup</div>
+        <div onclick="show(' Document Dispatch')">Document Dispatch</div>
+        <div onclick="show('Document Return')">Document Return</div>
+        <div onclick="show('Payment')">Payment</div>
+        <div onclick="show('Others')">Others</div>
+        
+    </div>
+
+    
+ </div>
+
+ <div class = "btn_box">
+    <button id = "next1" type="button" >Next1</button>
+   </div>
+
+  
+  
+
+  <script>
+    function show(anything){
+        document.querySelector('.textBox').value = anything;
+    }
+
+    
+  
+let dropdown  = document.querySelector('.dropdown');
+dropdown.onclick = function(){
+    dropdown.classlist.toggle('active');
+}
+
+
+  </script>
+
+</body>
+</html>
