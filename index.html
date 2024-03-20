@@ -9,10 +9,15 @@
 </head>
 <body>
 
-    <h3>Driving License Renewal</h3>
+    
+    <div class = Container>
+
+   <h3>Driving License Renewal</h3>
  <div class="dropdown">
+    <form id = Form1>
+    <h3>All Issues </h3>
     <input type="text" class="textBox" placeholder="Choose issue" readonly>
-    <div class="option">
+<div class="option">
         <div onclick="show('Sales')">Sales</div>
         <div onclick="show('Document Pickup')">Document Pickup</div>
         <div onclick="show(' Document Dispatch')">Document Dispatch</div>
@@ -20,39 +25,76 @@
         <div onclick="show('Payment')">Payment</div>
         <div onclick="show('Others')">Others</div>
         
-    </div>
-
-    
- </div>
-
- <div class = "btn_box">
+<div class = "btn_box">
     <button id = "next1" type="button" >Next1</button>
-   </div>
+</div>
 
-   <div class="container">
-    <form id = "form1">
+</form> 
+</div>
+</div>
+
+
+
+    <form id = "Form2">
         <h2> Let's Get Started</h2>
         <h4>Add your details (As per your registered records)</h4>
-        <input type="Name" placeholder="Email" />
-        <input type="Nature of Driving License" placeholder="Email" />
-        <input type="Type of Previous Driving License" placeholder="Email" />
-        <div class = "btn_box">
+        <h4>Name</h4>
+        <input type=" Name" placeholder=" EnterName">
+        <h4>Nature of Driving License</h4>
+ <label class="container">Private
+   <input type="radio" checked="checked" name="radio">
+   <span class="checkmark"></span>
+ </label>
+ <label class="container">Commercial
+   <input type="radio" name="radio">
+   <span class="checkmark"></span>
+ </label>
+
+<h4>Type of Previous Driving License</h4>
+<label class="container">Paper Driving License
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+   <label class="container">Smart Driving License
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+  </label>
+<div class = "btn_box">
          <button id = "next2" type="button" >Next</button>
+         <button id = "back1" type="button" >Back</button>
         </div>
         </form>
   
-        <form id = "form3">
+<form id = "Form3">
             <h2> Let's Get Started</h2>
         <h4>Add your details (As per your registered records)</h4>
-            <input type="Place where Driving License was issued" placeholder="Email" />
-            <input type="Issued Year of License" placeholder="Email" />
-            <input type="Type of Previous Driving License" placeholder="Email" />
-            <div class = "btn_box">
-             <button id = "next3" type="button" >Next</button>
-            </div>
+        <h3>Place where Driving License was issued</h3>
+     <input type="name" placeholder="Enter Place Name" />
+     <h3>Issued Year of License</h3>
+     <div class="dropdown">
+        <input type="text" class="textBox" placeholder="Choose Issued Year of License" readonly>
+        <div class="option">
+            <div onclick="show('Sales')">2000</div>
+            <div onclick="show('Document Pickup')">2001</div>
+            <div onclick="show(' Document Dispatch')">2002</div>
+            <div onclick="show('Document Return')">2003</div>
+            <div onclick="show('Payment')">2004</div>
+            <div onclick="show('Others')">2005</div>
+            
+        </div>
+        <div class = "btn_box">
+             <button id = "back2" type="button" >Back</button>
+
+        </div>
       </form>
-    
-   </div>
+   </div> 
+   <div class="step-row">
+    <div id = "progress">
+        <div class="step-col"><small></small></div>
+        <div class="step-col"><small></small></div>
+        <div class="step-col"><small></small></div>
+    </div>
+  </div>
 
   
   
@@ -68,6 +110,14 @@ let dropdown  = document.querySelector('.dropdown');
 dropdown.onclick = function(){
     dropdown.classlist.toggle('active');
 }
+var form1  = document.getElementById("Form1");
+var form1  = document.getElementById("Form2");
+var form1  = document.getElementById("Form3");
+
+var Next1  = document.getElementById("Next1");
+var Next2  = document.getElementById("Next2");
+var Back1  = document.getElementById("Back1");
+var Back2  = document.getElementById("Back2");
 
 
   </script>
